@@ -11,7 +11,7 @@ class DetailBody extends StatelessWidget {
       required this.name,
       required this.price,
       required this.imagePath,
-        required this.description});
+      required this.description});
 
   final String name;
 
@@ -24,6 +24,7 @@ class DetailBody extends StatelessWidget {
     return Stack(
       children: [
         Positioned(top: 0, child: ProductImage(imagePath: imagePath)),
+        const Positioned(left: 20, top: 30, child: BackButton()),
         Positioned(
           top: 270,
           child: Container(
@@ -39,7 +40,9 @@ class DetailBody extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.start,
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  ProductPrice( price: price,),
+                  ProductPrice(
+                    price: price,
+                  ),
                   const SizedBox(height: 25),
                   Text(
                     name,

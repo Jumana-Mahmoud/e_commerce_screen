@@ -25,7 +25,7 @@ class ItemsList extends StatelessWidget {
       description: 'Elevate your world with the iPhone 14 Pro Max,'
           ' where revolutionary technology meets unparalleled sophistication "',
     ),
-    
+
   ];
   final List<String> itemsImage = [
     'assets/images/printer.png',

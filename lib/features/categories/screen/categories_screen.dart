@@ -11,7 +11,7 @@ class CategoriesScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Padding(
-        padding: const EdgeInsets.fromLTRB(0, 60, 0, 20),
+        padding: const EdgeInsets.fromLTRB(16, 60, 0, 16),
         child: Column(
             crossAxisAlignment: CrossAxisAlignment.center,
             mainAxisAlignment: MainAxisAlignment.start,
@@ -20,9 +20,7 @@ class CategoriesScreen extends StatelessWidget {
                 'Categories',
                 style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18),
               ),
-              const SizedBox(
-                height: 20,
-              ),
+              const SizedBox(height: 20),
               const CustomSearchBar(
                 hintText: 'Search Category ',
                 width: 350,
