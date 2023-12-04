@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 
-import '../../core/widgets/items_list.dart';
-import '../../core/widgets/label_widget.dart';
+import '/core/widgets/items_list.dart';
+import '/core/widgets/label_widget.dart';
 
 class BestSelling extends StatelessWidget {
   const BestSelling({super.key});

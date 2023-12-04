@@ -1,4 +1,6 @@
 import 'package:ecommerce_screen/core/style/colors.dart';
+import 'package:ecommerce_screen/features/categories/screen/categories_screen.dart';
+import 'package:ecommerce_screen/features/home/screens/home_screen.dart';
 import 'package:flutter/material.dart';
 
 class BottomNavigations extends StatefulWidget {
@@ -12,12 +14,29 @@ class _BottomNavigationsState extends State<BottomNavigations> {
   int _selectedIndex = 0;
 
   static const TextStyle optionStyle =
-      TextStyle(fontSize: 30, fontWeight: FontWeight.bold);
+  TextStyle(fontSize: 30, fontWeight: FontWeight.bold);
 
   void _onItemTapped(int index) {
     setState(() {
       _selectedIndex = index;
     });
+
+    switch (index) {
+      case 0:
+        Navigator.push(context, MaterialPageRoute(builder:
+            (context)=> const HomeScreen()));
+        break;
+      case 1:
+        Navigator.push(context, MaterialPageRoute(builder:
+            (context)=> CategoriesScreen()));
+        break;
+      case 2:
+        break;
+      case 3:
+        break;
+      case 4:
+        break;
+    }
   }
 
   @override

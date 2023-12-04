@@ -1,6 +1,6 @@
+import 'package:ecommerce_screen/features/home/widgets/best_selling.dart';
 import 'package:flutter/material.dart';
 
-import '../widgets/best_selling.dart';
 import '../widgets/bottom_nav_bar.dart';
 import '../widgets/featured_items.dart';
 import '../widgets/special_items.dart';
@@ -11,8 +11,8 @@ class HomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
-      body: Padding(
+    return  const Scaffold(
+      body:  Padding(
         padding: EdgeInsets.fromLTRB(16, 50, 16, 16),
         child: SingleChildScrollView(
           child: Column(

@@ -6,6 +6,11 @@ class Palette {
   static const Color mainTextColor = Colors.black;
   static const Color minorTextColor = Colors.white;
   static const Color smallText = Colors.grey;
+  static const Color red =  Colors.red;
+  static const Color lightColor =  Colors.black12;
+
+
+
 
 
 

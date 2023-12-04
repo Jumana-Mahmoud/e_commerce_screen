@@ -2,7 +2,7 @@ import 'package:ecommerce_screen/core/style/colors.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-import '../../core/widgets/label_widget.dart';
+import '../../../core/widgets/label_widget.dart';
 
 class SpecialItems extends StatelessWidget {
   const SpecialItems({super.key});
