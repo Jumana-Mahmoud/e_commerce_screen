@@ -1,7 +1,11 @@
 import 'package:ecommerce_screen/core/style/colors.dart';
 import 'package:ecommerce_screen/features/categories/screen/categories_screen.dart';
 import 'package:ecommerce_screen/features/home/screens/home_screen.dart';
+import 'package:ecommerce_screen/features/search/screen/search_screen.dart';
+import 'package:ecommerce_screen/features/whishlist/screen/wish_list.dart';
 import 'package:flutter/material.dart';
+
+import '../../profile/screen/profile.dart';
 
 class BottomNavigations extends StatefulWidget {
   const BottomNavigations({super.key});
@@ -28,13 +32,16 @@ class _BottomNavigationsState extends State<BottomNavigations> {
         break;
       case 1:
         Navigator.push(context, MaterialPageRoute(builder:
-            (context)=> CategoriesScreen()));
+            (context)=> const CategoriesScreen()));
         break;
-      case 2:
+      case 2: Navigator.push(context, MaterialPageRoute(builder:
+          (context)=> const SearchScreen()));
         break;
-      case 3:
+      case 3:Navigator.push(context, MaterialPageRoute(builder:
+          (context)=> const WishListScreen()));
         break;
-      case 4:
+      case 4:Navigator.push(context, MaterialPageRoute(builder:
+          (context)=> const Profile()));
         break;
     }
   }

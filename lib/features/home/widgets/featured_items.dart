@@ -12,7 +12,7 @@ class FeaturedItems extends StatelessWidget {
         const LabelText(
           text: 'Featured Products',
         ),
-        ItemsList(),
+        ItemList(),
       ],
     );
   }

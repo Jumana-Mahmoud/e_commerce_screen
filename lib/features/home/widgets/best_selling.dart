@@ -13,7 +13,7 @@ class BestSelling extends StatelessWidget {
         const LabelText(
           text: 'Best Selling Products',
         ),
-        ItemsList(),
+        ItemList(),
       ],
     );
   }
