@@ -2,14 +2,15 @@ import 'package:ecommerce_screen/core/style/colors.dart';
 import 'package:flutter/cupertino.dart';
 
 class LabelText extends StatelessWidget {
-  const LabelText({super.key, required this.text});
+  const LabelText({super.key, required this.text, this.lightText});
 
   final String text;
+  final String? lightText;
 
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.all(12),
+      padding: const EdgeInsets.all(12.0),
       child: Row(
         children: [
           Text(
@@ -19,9 +20,9 @@ class LabelText extends StatelessWidget {
                 color: Palette.mainTextColor),
           ),
           const Spacer(),
-          const Text(
-            'See More',
-            style: TextStyle(fontSize: 10, color: Palette.smallText),
+           Text(
+            lightText?? 'See More',
+            style: const TextStyle(fontSize: 10, color: Palette.smallText),
           ),
         ],
       ),

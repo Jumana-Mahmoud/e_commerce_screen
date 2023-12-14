@@ -2,10 +2,15 @@ import 'package:flutter/material.dart';
 import '../style/colors.dart';
 
 class IconCard extends StatelessWidget {
-  const IconCard({super.key, required this.icon, this.badgeCount = 0});
+  const IconCard(
+      {super.key,
+      required this.icon,
+      this.badgeCount = 0,
+      required this.screen});
 
   final IconData icon;
   final int badgeCount;
+  final Widget screen;
 
   @override
   Widget build(BuildContext context) {
@@ -19,9 +24,13 @@ class IconCard extends StatelessWidget {
           SizedBox(
             width: 50,
             height: 50,
-            child: Icon(
-              icon,
+            child: IconButton(
+              icon: Icon(icon),
               color: Palette.secondaryColor,
+              onPressed: () {
+                Navigator.push(
+                    context, MaterialPageRoute(builder: (context) => screen));
+              },
             ),
           ),
           if (badgeCount > 0)
@@ -29,14 +38,14 @@ class IconCard extends StatelessWidget {
               right: 0,
               top: 0,
               child: Container(
-                padding: EdgeInsets.all(4),
-                decoration: BoxDecoration(
+                padding: const EdgeInsets.all(4),
+                decoration: const BoxDecoration(
                   shape: BoxShape.circle,
                   color: Palette.secondaryColor, // Adjust the color as needed
                 ),
                 child: Text(
                   badgeCount.toString(),
-                  style: TextStyle(
+                  style: const TextStyle(
                     color: Colors.white,
                     fontSize: 12,
                     fontWeight: FontWeight.bold,

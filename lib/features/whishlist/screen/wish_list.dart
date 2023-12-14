@@ -1,3 +1,4 @@
+import 'package:ecommerce_screen/core/widgets/cart_icon.dart';
 import 'package:ecommerce_screen/core/widgets/products_cards_list.dart';
 import 'package:ecommerce_screen/core/widgets/screen_scaffold.dart';
 import 'package:flutter/material.dart';
@@ -11,7 +12,7 @@ class WishListScreen extends StatelessWidget {
       title: 'WishList',
       searchText: 'Product',
       children: [
-        ProductCardsList(),
+        ProductCardsList(trailing: CartIcon(),),
       ],
     );
   }
