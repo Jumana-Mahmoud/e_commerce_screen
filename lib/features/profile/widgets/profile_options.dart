@@ -1,5 +1,10 @@
+import 'package:ecommerce_screen/core/utils/navigation_helper.dart';
 import 'package:ecommerce_screen/features/profile/widgets/profile_option_card.dart';
 import 'package:flutter/material.dart';
+
+import '../../cart/screen/cart.dart';
+import '../../language/screen/language_screen.dart';
+import '../../shipping_address/screen/shipping_address_screen.dart';
 
 class ProfileOptions extends StatelessWidget {
   ProfileOptions({super.key});
@@ -35,9 +40,27 @@ class ProfileOptions extends StatelessWidget {
         itemCount: optionsIcons.length,
         itemBuilder: (BuildContext context, int index) {
           return ProfileOptionCard(
-              option: options[index], icon: optionsIcons[index]);
+              option: options[index],
+              icon: optionsIcons[index],
+              onPressed: () => _navigateToScreen(context, index));
         },
       ),
     );
+  }
+
+  void _navigateToScreen(BuildContext context, int index) {
+    switch (index) {
+      case 1:
+        NavigatorHelper.navigateTo(context, const CartScreen());
+        break;
+        case 2:
+        NavigatorHelper.navigateTo(context, const Language());
+        break;
+        case 3:
+        NavigatorHelper.navigateTo(context, const ShippingAddressScreen());
+        break;
+      default:
+        break;
+    }
   }
 }

@@ -8,8 +8,8 @@ class PaymentScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: const ScreenHeader(title: 'Payment'),
+    return const Scaffold(
+      appBar: ScreenHeader(title: 'Payment'),
       body: PayementScreenBody(),
     );
   }

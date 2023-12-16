@@ -18,7 +18,7 @@ class ScreenHeader extends StatelessWidget implements PreferredSizeWidget {
       backgroundColor: Colors.white,
       foregroundColor: Palette.mainTextColor,
       actions: [
-        Icon(icon) ?? SizedBox(),
+        Icon(icon),
       ],
     );
   }
